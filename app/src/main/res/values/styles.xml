@@ -8,5 +8,4 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:statusBarColor">@color/colorBackground</item>
     </style>
-
 </resources>
