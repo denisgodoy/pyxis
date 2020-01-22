@@ -1,5 +1,6 @@
 package com.example.pyxis
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.TextureView
 import android.view.View
@@ -18,12 +19,23 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        btnLogin.setOnClickListener {
+            startActivity(Intent(this@MainActivity, LoginActivity::class.java))
+        }
+
+        btnSignup.setOnClickListener {
+            startActivity(Intent(this@MainActivity, SignupActivity::class.java))
+        }
+
+        btnSurf.setOnClickListener {
+            startActivity(Intent(this@MainActivity, WebActivity::class.java))
+        }
+
         val content = arrayOf(
             Content("Tema verdadeiramente escuro.", "Economize bateria e tenha mais conforto ao navegar na web.", R.drawable.iconmoon),
             Content("Liberdade para customizar.", "Suas preferências ficam salvas para cada novo acesso.", R.drawable.iconconfig),
             Content("Pesquisa ao seu alcance.", "Operação com uma mão é prioridade e comodidade.", R.drawable.iconsearch)
         )
-
 
         addDots(content.size)
 
